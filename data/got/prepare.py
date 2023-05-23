@@ -3,9 +3,12 @@ import tiktoken
 import numpy as np
 
 # download the tiny shakespeare dataset
-input_file_path = os.path.join(os.path.dirname(__file__), '001ssb.txt')
-with open(input_file_path, 'r') as f:
-    data = f.read()
+book_names = ['001ssb.txt', '002ssb.txt', '003ssb.txt','004ssb.txt', '005ssb.txt']
+data = []
+for book in book_names:
+    input_file_path = os.path.join(os.path.dirname(__file__), book)
+    with open(input_file_path, 'r') as f:
+        data.append(f.read())
 n = len(data)
 train_data = data[:int(n*0.9)]
 val_data = data[int(n*0.9):]
