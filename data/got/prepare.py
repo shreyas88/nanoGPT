@@ -6,6 +6,7 @@ import numpy as np
 book_names = ['001ssb.txt', '002ssb.txt', '003ssb.txt','004ssb.txt', '005ssb.txt']
 data = []
 for book in book_names:
+    print(book)
     input_file_path = os.path.join(os.path.dirname(__file__), book)
     with open(input_file_path, 'r') as f:
         data.append(f.read())
