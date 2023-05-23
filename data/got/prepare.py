@@ -3,7 +3,7 @@ import tiktoken
 import numpy as np
 
 # download the tiny shakespeare dataset
-book_names = ['001ssb.txt', '002ssb.txt', '003ssb.txt','004ssb.txt', '005ssb.txt']
+book_names = ['001ssb.txt', '002ssb.txt', '003ssb.txt','005ssb.txt']
 data = []
 for book in book_names:
     print(book)
